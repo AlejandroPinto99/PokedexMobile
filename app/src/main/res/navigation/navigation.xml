@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/search_destination"
+    tools:ignore="UnusedNavigation">
+
+    <fragment
+        android:id="@+id/search_destination"
+        android:name="com.mrpintos8.pokedexregistration.SearchPokemon"
+        android:label="title_fragment"
+        tools:layout="@layout/fragment_search_pokemon"
+        >
+
+        <action
+            android:id="@+id/action_search_destination_to_pokedexRegister"
+            app:destination="@id/pokedexRegister" />
+    </fragment>
+    <fragment
+        android:id="@+id/pokedexRegister"
+        android:name="com.mrpintos8.pokedexregistration.PokedexRegister"
+        android:label="fragment_pokedex_register"
+        tools:layout="@layout/fragment_pokedex_register" />
+
+</navigation>
