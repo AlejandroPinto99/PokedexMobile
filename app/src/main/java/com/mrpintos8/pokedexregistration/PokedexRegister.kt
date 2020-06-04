@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
+import com.mrpintos8.pokedexregistration.databinding.FragmentPokedexRegisterBinding
 
 /**
  * A simple [Fragment] subclass.
@@ -16,7 +18,11 @@ class PokedexRegister : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_pokedex_register, container, false)
+        var binding =  DataBindingUtil.inflate<FragmentPokedexRegisterBinding>(inflater,
+        R.layout.fragment_pokedex_register, container, false)
+
+
+        return binding.root
     }
 
 }
