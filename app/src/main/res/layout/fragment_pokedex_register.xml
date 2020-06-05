@@ -12,8 +12,8 @@
 
         <ImageView
             android:id="@+id/iv_pikachu"
-            android:layout_width="172dp"
-            android:layout_height="213dp"
+            android:layout_width="155dp"
+            android:layout_height="193dp"
             android:src="@drawable/pikachu_register"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -32,114 +32,72 @@
             android:textSize="15sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
             app:layout_constraintStart_toEndOf="@+id/iv_pikachu"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.303" />
+            app:layout_constraintVertical_bias="0.281" />
 
-        <TextView
-            android:id="@+id/tv_pokemon_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Pokemon's Name: "
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.23"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/iv_pikachu"
-            app:layout_constraintVertical_bias="0.027" />
 
         <EditText
             android:id="@+id/et_pokemon_name"
-            android:layout_width="246dp"
-            android:layout_height="35dp"
-            android:layout_marginTop="8dp"
+            android:layout_width="261dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="33dp"
             android:ems="10"
+            android:hint="Pokemon Name"
             android:inputType="textPersonName"
-            app:layout_constraintBottom_toTopOf="@+id/tv_first_type"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.456"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_pokemon_name"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <TextView
-            android:id="@+id/tv_first_type"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="First Type:"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.192"
+            app:layout_constraintHorizontal_bias="0.289"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_pokemon_name"
-            app:layout_constraintVertical_bias="0.161"
-            tools:ignore="MissingConstraints" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.442" />
 
         <EditText
             android:id="@+id/et_pokemon_first_type"
-            android:layout_width="246dp"
-            android:layout_height="35dp"
-            android:layout_marginTop="4dp"
+            android:layout_width="261dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
             android:ems="10"
+            android:hint="First Type"
             android:inputType="textPersonName"
-            app:layout_constraintBottom_toTopOf="@+id/tv_second_type"
+            app:layout_constraintBottom_toTopOf="@+id/btn_registration"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.436"
+            app:layout_constraintHorizontal_bias="0.289"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_first_type"
-            app:layout_constraintVertical_bias="0.434" />
-
-        <TextView
-            android:id="@+id/tv_second_type"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Second Type:"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.205"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_first_type"
-            app:layout_constraintVertical_bias="0.191"
-            tools:ignore="MissingConstraints" />
+            app:layout_constraintTop_toBottomOf="@+id/et_pokemon_name"
+            app:layout_constraintVertical_bias="0.0" />
 
         <EditText
             android:id="@+id/et_pokemon_second_type"
-            android:layout_width="246dp"
-            android:layout_height="35dp"
-            android:layout_marginTop="8dp"
+            android:layout_width="261dp"
+            android:layout_height="48dp"
             android:ems="10"
+            android:hint="Second Type"
             android:inputType="textPersonName"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.4"
+            app:layout_constraintHorizontal_bias="0.289"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_second_type"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <TextView
-            android:id="@+id/tv_origin_region"
-            android:layout_width="119dp"
-            android:layout_height="24dp"
-            android:text="Origin Region:"
-            app:layout_constraintBottom_toTopOf="@+id/et_origin_region"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.232"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/et_pokemon_second_type"
-            app:layout_constraintVertical_bias="0.636" />
+            app:layout_constraintTop_toBottomOf="@+id/et_pokemon_first_type"
+            app:layout_constraintVertical_bias="0.055" />
 
         <EditText
             android:id="@+id/et_origin_region"
-            android:layout_width="246dp"
-            android:layout_height="35dp"
+            android:layout_width="261dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="37dp"
+            android:layout_marginBottom="62dp"
             android:ems="10"
+            android:hint="Origin Region"
             android:inputType="textPersonName"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/btn_registration"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.429"
+            app:layout_constraintHorizontal_bias="0.289"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.859" />
+            app:layout_constraintTop_toBottomOf="@+id/et_pokemon_second_type"
+            app:layout_constraintVertical_bias="0.303" />
 
         <Button
             android:id="@+id/btn_registration"
@@ -149,10 +107,10 @@
             android:text="Register"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.226"
+            app:layout_constraintHorizontal_bias="0.206"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/et_origin_region"
-            app:layout_constraintVertical_bias="0.47" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.965" />
 
         <ProgressBar
             android:id="@+id/progressBar_register"
