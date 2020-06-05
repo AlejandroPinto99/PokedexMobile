@@ -9,17 +9,37 @@
         android:id="@+id/search_destination"
         android:name="com.mrpintos8.pokedexregistration.SearchPokemon"
         android:label="title_fragment"
-        tools:layout="@layout/fragment_search_pokemon"
-        >
+        tools:layout="@layout/fragment_search_pokemon">
 
         <action
             android:id="@+id/action_search_destination_to_pokedexRegister"
             app:destination="@id/pokedexRegister" />
+        <action
+            android:id="@+id/action_search_destination_to_pokemonInfo"
+            app:destination="@id/pokemonInfo" />
     </fragment>
     <fragment
         android:id="@+id/pokedexRegister"
         android:name="com.mrpintos8.pokedexregistration.PokedexRegister"
         android:label="fragment_pokedex_register"
         tools:layout="@layout/fragment_pokedex_register" />
+    <fragment
+        android:id="@+id/pokemonInfo"
+        android:name="com.mrpintos8.pokedexregistration.PokemonInfo"
+        android:label="fragment_pokemon_info"
+        tools:layout="@layout/fragment_pokemon_info" >
+        <argument
+            android:name="pokemon_name"
+            app:argType="string" />
+        <argument
+            android:name="first_type"
+            app:argType="string" />
+        <argument
+            android:name="second_type"
+            app:argType="string" />
+        <argument
+            android:name="region"
+            app:argType="string" />
+    </fragment>
 
 </navigation>
