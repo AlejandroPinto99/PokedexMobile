@@ -25,10 +25,12 @@ class SearchPokemon : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         //Inflando la vista
-        var binding = DataBindingUtil.inflate<FragmentSearchPokemonBinding>(inflater,
-        R.layout.fragment_search_pokemon, container, false)
+        var binding = DataBindingUtil.inflate<FragmentSearchPokemonBinding>(
+            inflater,
+            R.layout.fragment_search_pokemon, container, false
+        )
 
-        dbReference = FirebaseDatabase.getInstance().getReference()
+
 
         //Register botton event
         binding.btnRegister.setOnClickListener { view: View ->
@@ -38,31 +40,10 @@ class SearchPokemon : Fragment() {
 
 
         binding.btnSearch.setOnClickListener { view: View ->
-            searchPokemonInfo(binding.etSearchedPokemon.text.toString())
+
         }
 
         return binding.root
-    }
-    
-    private fun searchPokemonInfo(poke_name: String) {
-        dbReference.child("Pokedex").addValueEventListener(object : ValueEventListener {
-            override fun onDataChange(p0: DataSnapshot) {
-                if(p0.exists()){
-                    for(p: DataSnapshot in p0.children){
-                       if(poke_name == p.child("Name: ").getValue().toString()){
-                           Log.i("Pokemon", p.child("Name: ").getValue().toString() +" "+
-                               p.child("First Type: ").getValue().toString() +" "+
-                               p.child("Second Type: ").getValue().toString() +" "+
-                               p.child("Region: ").getValue().toString())
-                       }
-                    }
-                }
-            }
-
-            override fun onCancelled(p0: DatabaseError) {
-                TODO("Not yet implemented")
-            }
-        })
     }
 
 }
